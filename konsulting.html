@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONSULTING - Sic</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="font-['Pacifico'] text-2xl text-primary">SIC</span>
+                    <span class="ml-2 text-gray-600 font-medium">Rzeszów</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="ofirmie.html" class="text-gray-700 hover:text-primary transition-colors">O firmie</a>
+                    <a href="oferta.html" class="text-gray-700 hover:text-primary transition-colors">Oferta</a>
+                    <a href="konsulting.html" class="text-primary font-medium">Konsulting</a>
+                    <a href="r&d.html" class="text-gray-700 hover:text-primary transition-colors">R&D</a>
+                    <a href="procesyprzemyslowe.html" class="text-gray-700 hover:text-primary transition-colors">Procesy przemyslowe</a>
+                    <a href="archiwum.html" class="text-gray-700 hover:text-primary transition-colors">Archiwum</a>
+                    <a href="kontakt.html" class="text-gray-700 hover:text-primary transition-colors">Kontakt</a>
+                </div>
+                <button class="md:hidden w-6 h-6 flex items-center justify-center">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section class="relative h-80 flex items-center justify-center"
+        style="background-image: url('https://readdy.ai/api/search-image?query=modern%20chemical%20laboratory%20with%20molecular%20structure%20patterns%2C%20professional%20industrial%20background%2C%20clean%20white%20and%20blue%20tones%2C%20scientific%20equipment%2C%20minimalist%20design%2C%20high-tech%20atmosphere&width=1920&height=320&seq=hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <h1 class="relative text-6xl font-bold text-white tracking-wider">KONSULTING</h1>
+    </section>
+    <section class="py-20 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-16">
+                <div class="flex-1">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20chemical%20industrial%20process%20facility%20with%20advanced%20equipment%2C%20professional%20laboratory%20setting%2C%20industrial%20machinery%2C%20clean%20environment%2C%20chemical%20production%20line%2C%20scientific%20precision&width=600&height=400&seq=consulting-main&orientation=landscape"
+                        alt="Procesy przemysłowe" class="w-full h-96 object-cover object-top rounded-lg shadow-lg">
+                </div>
+                <div class="flex-1">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Wspieramy naszych klientów w rozwoju i optymalizacji procesów przemysłowych, oferując
+                        specjalistyczne doradztwo techniczne i technologiczne. Nasze działania obejmują m.in.
+                        impregnację papieru, produkcję płyt wiórowych, syntezę żywic aminowych oraz zagadnienia związane
+                        z zastosowaniem dodatków chemicznych w produkcji. Pracujemy kompleksowo – od rozpoznania
+                        problemu, przez analizę i diagnozę, aż po wdrożenie optymalnego rozwiązania. Nasze rekomendacje
+                        opieramy na wiedzy R&D i doświadczeniu zdobytym w wielu branżach przemysłowych.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-16">
+                <div class="flex-1">
+                    <img src="https://readdy.ai/api/search-image?query=decorative%20paper%20impregnation%20process%2C%20industrial%20paper%20coating%20machinery%2C%20chemical%20treatment%20of%20decorative%20materials%2C%20professional%20manufacturing%20equipment%2C%20clean%20industrial%20environment&width=600&height=400&seq=impregnation&orientation=landscape"
+                        alt="Impregnacja papieru" class="w-full h-96 object-cover object-top rounded-lg shadow-lg">
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Impregnacja papieru dekoracyjnego</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Doradzamy w zakresie doboru żywic aminowych i fenolowych, komponentów pomocniczych, lakierów
+                        oraz parametrów procesowych. Wspieramy naszych partnerów w:
+                    </p>
+                    <ul class="text-lg text-gray-700 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>opracowywaniu receptur do impregnacji papieru,</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>optymalizacji produkcji finish-folii,</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>rozwiązywaniu problemów związanych z laminowaniem płyt i obrzeży meblowych.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Produkcja płyt</h2>
+            <div class="grid grid-cols-4 gap-8">
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=plywood%20sheets%20stacked%20professionally%2C%20wooden%20veneer%20layers%20visible%2C%20industrial%20wood%20processing%2C%20clean%20manufacturing%20environment%2C%20high%20quality%20wood%20products&width=300&height=200&seq=plywood&orientation=landscape"
+                        alt="Sklejki" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">sklejki</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=HPL%20laminate%20sheets%20with%20decorative%20surface%2C%20high%20pressure%20laminate%20materials%2C%20professional%20industrial%20production%2C%20clean%20manufacturing%20facility&width=300&height=200&seq=hpl&orientation=landscape"
+                        alt="Laminaty HPL" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">laminaty HPL</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=CPL%20laminate%20panels%20with%20smooth%20surface%20finish%2C%20continuous%20pressure%20laminate%20production%2C%20modern%20manufacturing%20equipment%2C%20industrial%20quality%20materials&width=300&height=200&seq=cpl&orientation=landscape"
+                        alt="Laminaty CPL" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">laminaty CPL</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=fiberboard%20panels%20with%20smooth%20surface%2C%20compressed%20wood%20fiber%20materials%2C%20industrial%20board%20production%2C%20professional%20manufacturing%20environment&width=300&height=200&seq=fiberboard&orientation=landscape"
+                        alt="Płyty pilśniowe" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">płyty pilśniowe</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=porous%20board%20materials%20with%20visible%20texture%2C%20lightweight%20construction%20panels%2C%20industrial%20foam%20board%20production%2C%20clean%20manufacturing%20facility&width=300&height=200&seq=porous&orientation=landscape"
+                        alt="Płyty porowate" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">płyty porowate</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=OSB%20oriented%20strand%20board%20with%20visible%20wood%20chips%2C%20engineered%20wood%20panels%2C%20industrial%20construction%20materials%2C%20professional%20manufacturing&width=300&height=200&seq=osb&orientation=landscape"
+                        alt="OSB" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">OSB</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=MDF%20HDF%20medium%20density%20fiberboard%20panels%2C%20smooth%20surface%20wood%20composite%20materials%2C%20industrial%20board%20production%2C%20clean%20manufacturing%20environment&width=300&height=200&seq=mdf&orientation=landscape"
+                        alt="MDF/HDF" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">MDF/HDF</h3>
+                </div>
+                <div class="text-center">
+                    <img src="https://readdy.ai/api/search-image?query=NPB%20natural%20particle%20board%20with%20wood%20particles%2C%20engineered%20wood%20composite%20panels%2C%20industrial%20manufacturing%20process%2C%20professional%20production%20facility&width=300&height=200&seq=npb&orientation=landscape"
+                        alt="NPB" class="w-full h-32 object-cover object-top rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">NPB</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-16">
+                <div class="flex-1">
+                    <img src="https://readdy.ai/api/search-image?query=industrial%20pressing%20equipment%20ContiRoll%20system%2C%20continuous%20pressing%20machinery%2C%20professional%20manufacturing%20line%2C%20chemical%20process%20optimization%2C%20clean%20industrial%20environment&width=600&height=400&seq=pressing&orientation=landscape"
+                        alt="Optymalizacja procesów" class="w-full h-96 object-cover object-top rounded-lg shadow-lg">
+                </div>
+                <div class="flex-1">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Pomagamy w poprawie parametrów jakościowych i środowiskowych:
+                    </p>
+                    <ul class="text-lg text-gray-700 space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>skrócenie czasu prasowania,</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>obniżenie emisji formaldehydu,</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>ograniczenie pęcznienia płyt.</span>
+                        </li>
+                    </ul>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Wspieramy także w doborze efektywnych środków rozdzielających do pras typu ContiRoll i podobnych
+                        systemów ciągłego prasowania.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-16">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Optymalizacja procesów przemysłowych</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Oferujemy wsparcie technologiczne dla szerokiego spektrum aplikacji chemicznych – od ulepszenia
+                        istniejących formulacji, po opracowanie nowych rozwiązań. Pomagamy:
+                    </p>
+                    <ul class="text-lg text-gray-700 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>redukować koszty produkcji,</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>zwiększać wydajność linii technologicznych,</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1">•</span>
+                            <span>dostosowywać receptury do nowych wymagań prawnych i jakościowych.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <img src="https://readdy.ai/api/search-image?query=chemical%20process%20optimization%20laboratory%2C%20advanced%20analytical%20equipment%2C%20industrial%20chemistry%20research%2C%20professional%20scientific%20environment%2C%20modern%20technology%20solutions&width=600&height=400&seq=optimization&orientation=landscape"
+                        alt="Optymalizacja procesów przemysłowych"
+                        class="w-full h-96 object-cover object-top rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-[#2563a9] p-12 rounded-2xl shadow-lg relative">
+                <div
+                    class="w-20 h-20 bg-white rounded-full shadow-lg absolute -top-10 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                    <i class="ri-flask-line text-3xl text-primary"></i>
+                </div>
+                <p class="text-xl leading-relaxed text-white mt-6">
+                    Każde zlecenie traktujemy indywidualnie – proponujemy rozwiązania skrojone na miarę potrzeb klienta.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-['Pacifico'] text-xl text-secondary mb-4">SIC</h3>
+                    <p class="text-gray-400 text-sm">Specjalizujemy się w procesach przemysłowych i rozwiązaniach chemicznych dla przemysłu.</p>
+                </div>
+                
+                <div></div>
+                <div></div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Kontakt</h4>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>ul. Przemysłowa 15</p>
+                        <p>35-105 Rzeszów</p>
+                        <p>+48 17 852 34 56</p>
+                        <p>biuro@sic.pl</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D - SIC</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#1e40af', secondary: '#3b82f6' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="font-['Pacifico'] text-2xl text-primary">SIC</span>
+                    <span class="ml-2 text-gray-600 font-medium">Rzeszów</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="ofirmie.html" class="text-gray-700 hover:text-primary transition-colors">O firmie</a>
+                    <a href="oferta.html" class="text-gray-700 hover:text-primary transition-colors">Oferta</a>
+                    <a href="konsulting.html" class="text-gray-700 hover:text-primary transition-colors">Konsulting</a>
+                    <a href="r&d.html" class="text-primary font-medium">R&D</a>
+                    <a href="procesyprzemyslowe.html" class="text-gray-700 hover:text-primary transition-colors">Procesy przemyslowe</a>
+                    <a href="archiwum.html" class="text-gray-700 hover:text-primary transition-colors">Archiwum</a>
+                    <a href="kontakt.html" class="text-gray-700 hover:text-primary transition-colors">Kontakt</a>
+                </div>
+                <button class="md:hidden w-6 h-6 flex items-center justify-center">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20abstract%20dark%20blue%20scientific%20background%20with%20molecular%20structures%2C%20DNA%20helix%20patterns%2C%20soft%20glowing%20particles%2C%20professional%20laboratory%20elements%2C%20sophisticated%20tech%20visualization%2C%20deep%20navy%20blue%20gradient%2C%20elegant%20scientific%20design%2C%20minimalist%20research%20concept&width=1920&height=800&seq=hero-rd&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-primary bg-opacity-20"></div>
+            <div class="relative z-10 text-center">
+                <h1 class="text-8xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">R&D</h1>
+            </div>
+        </section>
+        <!-- First Description Section -->
+        <section class="py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg leading-relaxed text-gray-700">
+                            Laboratorium Badawczo-Rozwojowe firmy SIC stanowi zaawansowane centrum badawcze, w którym
+                            można tworzyć specjalistyczne rozwiązania dla przemysłu. Nasze laboratorium współpracuje z
+                            wieloma placówkami naukowymi w Polsce, które są wyposażone w nowoczesną aparaturę,
+                            umożliwiającą prowadzenie kompleksowych badań w wielu dziedzinach. Laboratorium zatrudnia
+                            wyspecjalizowaną kadrę badawczą z szerokim doświadczeniem przemysłowym i wiedzą z różnych
+                            dziedzin chemicznych.
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20chemist%20in%20white%20lab%20coat%20working%20with%20advanced%20laboratory%20equipment%2C%20modern%20scientific%20instruments%2C%20chemical%20analysis%2C%20research%20and%20development%20facility%2C%20clean%20laboratory%20environment%2C%20precision%20instruments%2C%20molecular%20research%2C%20professional%20scientist%20at%20work%2C%20high-tech%20laboratory%20setup&width=600&height=400&seq=lab-work&orientation=landscape"
+                            alt="Laboratorium chemiczne"
+                            class="w-full h-96 object-cover object-top rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Activities Section -->
+        <section class="py-20 px-4 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+                    Główne obszary działalności laboratorium obejmują:
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Badania -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-microscope-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Badania</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Tworzymy nowe technologie i receptury specjalistycznych produktów przemysłowych
+                        </p>
+                    </div>
+                    <!-- Testy -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-test-tube-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Testy</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Dzięki współpracy z wieloma ośrodkami naukowymi i firmami przemysłowymi jesteśmy w stanie
+                            testować nowe produkty bezpośrednio u klientów, którzy zlecili ich opracowanie, bądź w
+                            jednostkach naukowych, z którymi współpracujemy
+                        </p>
+                    </div>
+                    <!-- Wdrażanie -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-settings-3-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Wdrażanie</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Wspieramy wdrażanie nowych rozwiązań chemicznych przechodząc od teorii do praktyki i
+                            wspierając tym samym polską gospodarkę, pozwalając przedsiębiorstwom obniżać koszty
+                            produkcji, stawać się bardziej efektywnymi i konkurencyjnymi na rynku polskim i zagranicznym
+                        </p>
+                    </div>
+                    <!-- Rozwój -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-line-chart-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Rozwój</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Nasi pracownicy pracują nad połączeniem wiedzy i doświadczenia, celem opracowywania i
+                            dostarczania przemysłowi kompleksowych rozwiązań
+                        </p>
+                    </div>
+                    <!-- Szukanie alternatyw -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-2">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-flask-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Szukanie alternatyw</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            W czasach problemów z dostępnością surowców i bardzo dużych zmian technologicznych
+                            laboratorium może podjąć się opracowania czegoś, czego nie ma na rynku, bądź jego skład musi
+                            zostać zmodyfikowany w skutek braku surowców przy zachowaniu tych samych parametrów
+                            jakościowych
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mission Section -->
+        <section class="py-20 px-4 bg-gradient-to-br from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20scientist%20explaining%20research%20data%20on%20digital%20screen%2C%20modern%20laboratory%20presentation%2C%20scientific%20documentation%2C%20research%20and%20development%20process%20visualization%2C%20clean%20professional%20environment%2C%20innovation%20presentation&width=600&height=400&seq=mission-img&orientation=landscape"
+                            alt="Mission visualization" class="w-full h-[400px] object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="space-y-8">
+                        <p class="text-lg leading-relaxed text-gray-700">
+                            Misją laboratorium badawczo – rozwojowego jest nie tylko opracowywanie innowacyjnych
+                            technologii dla przemysłu, ale także ich skuteczne wdrażanie do produkcji, co pozwala na
+                            szybki rozwój branży produkcyjnej w Polsce i udostępnianie produktów stanowiących
+                            alternatywę dla rozwiązań już funkcjonujących lub unowocześnionych spełniających najnowsze
+                            wymagania prawne i jakościowe.
+                        </p>
+                        <p class="text-lg leading-relaxed text-gray-700">
+                            Duża wiedza, doświadczenie pracowników oraz potencjał laboratorium są motorem napędowym
+                            rozwoju technologii w wielu dziedzinach przemysłu. Stanowi to wartość dodaną firmy i stawia
+                            ją w czołówce tego typu podmiotów w Polsce, które działają w tak specjalistycznym obszarze
+                            badawczo – rozwojowym.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-20 px-4 bg-gray-50">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-[#2563a9] p-12 rounded-2xl shadow-lg relative">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full shadow-lg absolute -top-10 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                        <i class="ri-flask-line text-3xl text-primary"></i>
+                    </div>
+                    <p class="text-xl leading-relaxed text-white mt-6">
+                        Jeśli potrzebujesz produktu dostosowanego do specyficznych wymagań zapraszamy do współpracy z
+                        naszym Laboratorium R&D – spróbujemy pomóc i opracować produkt specjalny i profesjonalny właśnie
+                        na Twoje potrzeby.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-white mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-['Pacifico'] text-xl text-secondary mb-4">SIC</h3>
+                    <p class="text-gray-400 text-sm">Specjalizujemy się w procesach przemysłowych i rozwiązaniach chemicznych dla przemysłu.</p>
+                </div>
+                
+                <div></div>
+                <div></div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Kontakt</h4>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>ul. Przemysłowa 15</p>
+                        <p>35-105 Rzeszów</p>
+                        <p>+48 17 852 34 56</p>
+                        <p>biuro@sic.pl</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

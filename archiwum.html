@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiwum - SIC Rzeszów</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        
+        .timeline-line {
+            background: linear-gradient(to bottom, #e5e7eb 0%, #2563eb 20%, #2563eb 80%, #e5e7eb 100%);
+        }
+        
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(2rem);
+            transition: all 0.6s ease-out;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+        
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .archive-preview {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .archive-preview:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="font-['Pacifico'] text-2xl text-primary">SIC</span>
+                    <span class="ml-2 text-gray-600 font-medium">Rzeszów</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="ofirmie.html" class="text-gray-700 hover:text-primary transition-colors">O firmie</a>
+                    <a href="oferta.html" class="text-gray-700 hover:text-primary transition-colors">Oferta</a>
+                    <a href="konsulting.html" class="text-gray-700 hover:text-primary transition-colors">Konsulting</a>
+                    <a href="r&d.html" class="text-gray-700 hover:text-primary transition-colors">R&D</a>
+                    <a href="procesyprzemyslowe.html" class="text-gray-700 hover:text-primary transition-colors">Procesy przemyslowe</a>
+                    <a href="archiwum.html" class="text-primary font-medium">Archiwum</a>
+                    <a href="kontakt.html" class="text-gray-700 hover:text-primary transition-colors">Kontakt</a>
+                </div>
+                <button class="md:hidden w-6 h-6 flex items-center justify-center">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20chemical%20laboratory%20with%20clean%20white%20background%20and%20blue%20accents%2C%20professional%20industrial%20setting%20with%20glass%20equipment%20and%20modern%20technology%2C%20minimalist%20design%20with%20soft%20lighting%20and%20contemporary%20atmosphere&width=1920&height=600&seq=hero-archive&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">ARCHIWUM</h1>
+        </div>
+    </div>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">20 lat doświadczenia w branży chemicznej</h2>
+                    <div class="space-y-6 text-lg text-gray-700">
+                        <p>Firma SIC Rzeszów została założona w 2004 roku z misją dostarczania najwyższej jakości produktów chemicznych dla przemysłu polskiego. Przez dwie dekady naszej działalności, staliśmy się jednym z wiodących dostawców specjalistycznych substancji chemicznych w regionie.</p>
+                        <p>Nasza historia to ciągły rozwój, inwestycje w nowoczesne technologie oraz budowanie długotrwałych relacji z klientami. Od skromnych początków w małym magazynie, rozwinęliśmy się do nowoczesnego centrum dystrybucyjnego obsługującego klientów w całej Polsce.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-award-line text-2xl text-white"></i>
+                            </div>
+                            <div class="text-3xl font-bold text-primary">500+</div>
+                            <div class="text-gray-600">Zadowolonych klientów</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-flask-line text-2xl text-white"></i>
+                            </div>
+                            <div class="text-3xl font-bold text-primary">1200+</div>
+                            <div class="text-gray-600">Produktów w ofercie</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://readdy.ai/api/search-image?query=professional%20chemical%20company%20team%20working%20in%20modern%20laboratory%2C%20people%20in%20white%20coats%20with%20safety%20equipment%2C%20contemporary%20industrial%20facility%20with%20clean%20design%20and%20professional%20atmosphere&width=600&height=400&seq=company-team&orientation=landscape" alt="Zespół SIC" class="rounded-2xl shadow-2xl object-cover w-full h-96">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Historia rozwoju naszej strony internetowej</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Prześledzcie z nami ewolucję naszej obecności online przez ostatnie dwie dekady</p>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line"></div>
+                
+                <div class="space-y-24">
+                    <div class="timeline-item relative">
+                        <div class="flex items-center">
+                            <div class="w-1/2 pr-12">
+                                <div class="text-right">
+                                    <div class="inline-block bg-primary text-white px-6 py-2 rounded-full font-bold text-lg mb-4">2004</div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pierwsza strona internetowa</h3>
+                                    <p class="text-gray-600 mb-6">Prosta strona wizytówka z podstawowymi informacjami o firmie i ofercie. Statyczny design z klasycznym układem tabel i prostą nawigacją.</p>
+                                    <div class="flex justify-end">
+                                        <button class="archive-preview bg-white rounded-lg shadow-lg p-4 max-w-sm">
+                                            <img src="https://readdy.ai/api/search-image?query=early%202000s%20website%20design%20with%20simple%20table%20layout%2C%20basic%20html%20structure%2C%20blue%20and%20white%20color%20scheme%2C%20old%20school%20web%20design%20with%20minimal%20graphics%20and%20text-heavy%20content&width=400&height=300&seq=website-2004&orientation=landscape" alt="Strona z 2004" class="rounded object-cover w-full h-48">
+                                            <div class="mt-3 text-sm text-gray-500">Kliknij aby powiększyć</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+                            <div class="w-1/2 pl-12"></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="flex items-center">
+                            <div class="w-1/2 pr-12"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+                            <div class="w-1/2 pl-12">
+                                <div class="inline-block bg-primary text-white px-6 py-2 rounded-full font-bold text-lg mb-4">2008</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Redesign i CMS</h3>
+                                <p class="text-gray-600 mb-6">Wprowadzenie systemu zarządzania treścią, nowoczesniejszy design z gradientami i pierwszymi elementami interaktywnymi. Dodanie katalogu produktów.</p>
+                                <button class="archive-preview bg-white rounded-lg shadow-lg p-4 max-w-sm">
+                                    <img src="https://readdy.ai/api/search-image?query=mid%202000s%20website%20with%20css%20gradients%20and%20rounded%20corners%2C%20more%20colorful%20design%20with%20navigation%20menu%2C%20product%20catalog%20layout%20with%20blue%20corporate%20theme%20and%20modern%20elements%20for%20that%20era&width=400&height=300&seq=website-2008&orientation=landscape" alt="Strona z 2008" class="rounded object-cover w-full h-48">
+                                    <div class="mt-3 text-sm text-gray-500">Kliknij aby powiększyć</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="flex items-center">
+                            <div class="w-1/2 pr-12">
+                                <div class="text-right">
+                                    <div class="inline-block bg-primary text-white px-6 py-2 rounded-full font-bold text-lg mb-4">2013</div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Era responsywności</h3>
+                                    <p class="text-gray-600 mb-6">Pierwszy responsywny design dostosowany do urządzeń mobilnych. Wprowadzenie social media, blog firmowy i zaawansowana wyszukiwarka produktów.</p>
+                                    <div class="flex justify-end">
+                                        <button class="archive-preview bg-white rounded-lg shadow-lg p-4 max-w-sm">
+                                            <img src="https://readdy.ai/api/search-image?query=early%202010s%20responsive%20website%20design%20with%20flat%20design%20elements%2C%20mobile-friendly%20layout%2C%20social%20media%20integration%2C%20modern%20typography%20and%20clean%20blue%20corporate%20branding&width=400&height=300&seq=website-2013&orientation=landscape" alt="Strona z 2013" class="rounded object-cover w-full h-48">
+                                            <div class="mt-3 text-sm text-gray-500">Kliknij aby powiększyć</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+                            <div class="w-1/2 pl-12"></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="flex items-center">
+                            <div class="w-1/2 pr-12"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+                            <div class="w-1/2 pl-12">
+                                <div class="inline-block bg-primary text-white px-6 py-2 rounded-full font-bold text-lg mb-4">2018</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Nowoczesna platforma</h3>
+                                <p class="text-gray-600 mb-6">Kompleksowa przebudowa z focus na UX/UI. Wprowadzenie e-commerce, systemu zamówień online, chatbota i zaawansowanej analityki.</p>
+                                <button class="archive-preview bg-white rounded-lg shadow-lg p-4 max-w-sm">
+                                    <img src="https://readdy.ai/api/search-image?query=modern%202018%20website%20with%20material%20design%2C%20e-commerce%20functionality%2C%20clean%20interface%20with%20cards%20and%20modern%20typography%2C%20professional%20blue%20theme%20with%20excellent%20user%20experience&width=400&height=300&seq=website-2018&orientation=landscape" alt="Strona z 2018" class="rounded object-cover w-full h-48">
+                                    <div class="mt-3 text-sm text-gray-500">Kliknij aby powiększyć</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Galeria zdjęć</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Przejrzyj nasze archiwalne zdjęcia dokumentujące rozwój firmy przez lata</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="gallery-filter px-6 py-2 !rounded-button bg-primary text-white whitespace-nowrap" data-filter="all">Wszystkie</button>
+                <button class="gallery-filter px-6 py-2 !rounded-button bg-gray-200 text-gray-700 hover:bg-gray-300 whitespace-nowrap" data-filter="facility">Obiekty</button>
+                <button class="gallery-filter px-6 py-2 !rounded-button bg-gray-200 text-gray-700 hover:bg-gray-300 whitespace-nowrap" data-filter="team">Zespół</button>
+                <button class="gallery-filter px-6 py-2 !rounded-button bg-gray-200 text-gray-700 hover:bg-gray-300 whitespace-nowrap" data-filter="events">Wydarzenia</button>
+                <button class="gallery-filter px-6 py-2 !rounded-button bg-gray-200 text-gray-700 hover:bg-gray-300 whitespace-nowrap" data-filter="products">Produkty</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery">
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="facility">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20chemical%20warehouse%20facility%20with%20organized%20storage%20systems%2C%20industrial%20shelving%20with%20chemical%20containers%2C%20clean%20professional%20environment%20with%20safety%20equipment%20and%20proper%20lighting&width=400&height=300&seq=gallery-1&orientation=landscape" alt="Magazyn główny" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Magazyn główny</h3>
+                        <p class="text-sm text-gray-600">Nowoczesny kompleks magazynowy</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="team">
+                    <img src="https://readdy.ai/api/search-image?query=professional%20team%20meeting%20in%20modern%20conference%20room%2C%20business%20people%20in%20formal%20attire%20discussing%20chemical%20industry%20projects%2C%20contemporary%20office%20setting%20with%20presentation%20screens&width=400&height=300&seq=gallery-2&orientation=landscape" alt="Spotkanie zespołu" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Spotkanie zespołu</h3>
+                        <p class="text-sm text-gray-600">Planowanie strategii rozwoju</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="events">
+                    <img src="https://readdy.ai/api/search-image?query=chemical%20industry%20trade%20fair%20exhibition%20booth%20with%20professional%20displays%2C%20company%20representatives%20presenting%20products%20to%20visitors%2C%20modern%20exhibition%20hall%20with%20blue%20corporate%20branding&width=400&height=300&seq=gallery-3&orientation=landscape" alt="Targi branżowe" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Targi branżowe</h3>
+                        <p class="text-sm text-gray-600">Prezentacja na ChemShow 2019</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="products">
+                    <img src="https://readdy.ai/api/search-image?query=organized%20chemical%20products%20display%20with%20labeled%20containers%20and%20bottles%2C%20professional%20product%20photography%20with%20clean%20white%20background%2C%20various%20chemical%20substances%20in%20proper%20packaging&width=400&height=300&seq=gallery-4&orientation=landscape" alt="Produkty chemiczne" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Produkty chemiczne</h3>
+                        <p class="text-sm text-gray-600">Szeroka gama substancji</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="facility">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20chemical%20laboratory%20with%20advanced%20testing%20equipment%2C%20scientists%20working%20with%20analytical%20instruments%2C%20clean%20sterile%20environment%20with%20professional%20lighting%20and%20safety%20protocols&width=400&height=300&seq=gallery-5&orientation=landscape" alt="Laboratorium" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Laboratorium</h3>
+                        <p class="text-sm text-gray-600">Kontrola jakości produktów</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="team">
+                    <img src="https://readdy.ai/api/search-image?query=company%20anniversary%20celebration%20with%20employees%2C%20professional%20corporate%20event%20with%20cake%20cutting%20ceremony%2C%20happy%20team%20members%20in%20business%20attire%20celebrating%20milestone%20achievement&width=400&height=300&seq=gallery-6&orientation=landscape" alt="Rocznica firmy" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Rocznica firmy</h3>
+                        <p class="text-sm text-gray-600">Świętowanie 15-lecia</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="events">
+                    <img src="https://readdy.ai/api/search-image?query=professional%20training%20session%20in%20modern%20classroom%2C%20instructor%20teaching%20chemical%20safety%20protocols%20to%20employees%2C%20educational%20environment%20with%20presentation%20materials%20and%20safety%20equipment&width=400&height=300&seq=gallery-7&orientation=landscape" alt="Szkolenie BHP" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Szkolenie BHP</h3>
+                        <p class="text-sm text-gray-600">Bezpieczeństwo w pracy</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-category="facility">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20office%20building%20exterior%20with%20contemporary%20architecture%2C%20professional%20corporate%20headquarters%20with%20glass%20facade%20and%20company%20signage%2C%20clean%20urban%20environment%20with%20landscaping&width=400&height=300&seq=gallery-8&orientation=landscape" alt="Siedziba firmy" class="w-full h-48 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">Siedziba firmy</h3>
+                        <p class="text-sm text-gray-600">Nowoczesne biuro w Rzeszowie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="absolute top-4 right-4 text-white text-4xl z-10 w-12 h-12 flex items-center justify-center" onclick="closeLightbox()">
+            <i class="ri-close-line"></i>
+        </button>
+        <img id="lightbox-img" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <footer class="bg-gray-900 text-white mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-['Pacifico'] text-xl text-secondary mb-4">SIC</h3>
+                    <p class="text-gray-400 text-sm">Specjalizujemy się w procesach przemysłowych i rozwiązaniach chemicznych dla przemysłu.</p>
+                </div>
+                
+                <div></div>
+                <div></div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Kontakt</h4>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>ul. Przemysłowa 15</p>
+                        <p>35-105 Rzeszów</p>
+                        <p>+48 17 852 34 56</p>
+                        <p>biuro@sic.pl</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script id="timeline-animation">
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+            
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+    <script id="gallery-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.gallery-filter');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('active');
+                });
+            });
+            
+            window.closeLightbox = function() {
+                lightbox.classList.remove('active');
+            };
+            
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+
+    <script id="archive-preview">
+        document.addEventListener('DOMContentLoaded', function() {
+            const archivePreviews = document.querySelectorAll('.archive-preview');
+            
+            archivePreviews.forEach(preview => {
+                preview.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const lightbox = document.getElementById('lightbox');
+                    const lightboxImg = document.getElementById('lightbox-img');
+                    
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
