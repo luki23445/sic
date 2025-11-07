@@ -1,134 +1,176 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oferta - Produkty | SIC Rzeszów</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#059669'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#2563eb', secondary: '#059669' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        .product-card { transition: all 0.3s ease; }
-        .product-card:hover { transform: translateY(-4px); }
-        .chart-container { min-height: 300px; }
-        .table-responsive { overflow-x: auto; }
-        .nav-link.active { background-color: #2563eb; color: white; }
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .chart-container {
+            min-height: 300px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .nav-link.active {
+            background-color: #2563eb;
+            color: white;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <span class="font-['Pacifico'] text-2xl text-primary">SIC</span>
-                    <span class="ml-2 text-gray-600 font-medium">Rzeszów</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="ofirmie.html" class="text-gray-700 hover:text-primary transition-colors">O firmie</a>
-                    <a href="oferta.html" class="text-primary font-medium">Oferta</a>
-                    <a href="konsulting.html" class="text-gray-700 hover:text-primary transition-colors">Konsulting</a>
-                    <a href="r&d.html" class="text-gray-700 hover:text-primary transition-colors">R&D</a>
-                    <a href="procesyprzemyslowe.html" class="text-gray-700 hover:text-primary transition-colors">Procesy przemyslowe</a>
-                    <a href="archiwum.html" class="text-gray-700 hover:text-primary transition-colors">Archiwum</a>
-                    <a href="kontakt.html" class="text-gray-700 hover:text-primary transition-colors">Kontakt</a>
-                </div>
-                <button class="md:hidden w-6 h-6 flex items-center justify-center">
-                    <i class="ri-menu-line text-xl"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    <div class="min-h-screen">
 
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <nav class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center space-x-8">
+                        <div class="font-['Pacifico'] text-2xl text-primary">SIC</div>
+                        <div class="hidden md:flex space-x-6">
+                            <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Strona
+                                główna</a>
+                            <a href="#"
+                                class="text-primary bg-blue-50 px-3 py-2 text-sm font-medium rounded-button">Oferta</a>
+                            <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">O nas</a>
+                            <a href="#"
+                                class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Kontakt</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Szukaj produktów..."
+                                class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-button text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <div
+                                class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-search-line text-gray-400 text-sm"></i>
+                            </div>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-6 py-2 rounded-button text-sm font-medium hover:bg-blue-700 whitespace-nowrap">Zapytanie
+                            ofertowe</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex gap-8">
                 <aside class="w-64 flex-shrink-0">
                     <div class="bg-white rounded-lg shadow-sm p-6 sticky top-8">
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">Kategorie produktów</h3>
                         <nav class="space-y-2">
-                            <a href="#rozdzielajace" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#rozdzielajace"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-scissors-line text-sm"></i>
                                 </div>
                                 Środki rozdzielające
                             </a>
-                            <a href="#odpieniajace" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#odpieniajace"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-bubble-chart-line text-sm"></i>
                                 </div>
                                 Środki odpieniające
                             </a>
-                            <a href="#antypylowe" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#antypylowe"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-mist-line text-sm"></i>
                                 </div>
                                 Środki antypyłowe
                             </a>
-                            <a href="#zwilzajace" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#zwilzajace"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-drop-line text-sm"></i>
                                 </div>
                                 Środki zwilżające
                             </a>
-                            <a href="#woda" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#woda"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-water-line text-sm"></i>
                                 </div>
                                 Uzdatnianie wody
                             </a>
-                            <a href="#spieniajace" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#spieniajace"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-gas-station-line text-sm"></i>
                                 </div>
                                 Środki spieniające
                             </a>
-                            <a href="#utwardzacze" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#utwardzacze"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-hammer-line text-sm"></i>
                                 </div>
                                 Utwardzacze do żywic
                             </a>
-                            <a href="#plastyfikatory" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#plastyfikatory"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-flask-line text-sm"></i>
                                 </div>
                                 Plastyfikatory
                             </a>
-                            <a href="#plyny-myjace" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#plyny-myjace"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-brush-line text-sm"></i>
                                 </div>
                                 Płyny myjące
                             </a>
-                            <a href="#stabilizator" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#stabilizator"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-shield-check-line text-sm"></i>
                                 </div>
                                 Stabilizator formaliny
                             </a>
-                            <a href="#powlekacze" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#powlekacze"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-paint-brush-line text-sm"></i>
                                 </div>
                                 Powlekacze / Antyzbrylacze
                             </a>
-                            <a href="#sulfobursztyniany" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#sulfobursztyniany"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-test-tube-line text-sm"></i>
                                 </div>
                                 Sulfobursztyniany
                             </a>
-                            <a href="#dyspersje" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#dyspersje"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-compasses-2-line text-sm"></i>
                                 </div>
                                 Dyspersje i żywice
                             </a>
-                            <a href="#surowce" class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+                            <a href="#surowce"
+                                class="nav-link flex items-center px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
                                 <div class="w-4 h-4 flex items-center justify-center mr-3">
                                     <i class="ri-oil-line text-sm"></i>
                                 </div>
@@ -137,23 +179,225 @@
                         </nav>
                     </div>
                 </aside>
-
                 <main class="flex-1">
                     <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <h1 class="text-3xl font-bold text-gray-900 mb-4">Oferta - Produkty</h1>
-                        <p class="text-lg text-gray-600">Kompleksowe rozwiązania chemiczne dla przemysłu. Wysokiej jakości preparaty opracowane w oparciu o najnowszą wiedzę i światowe trendy rozwojowe.</p>
+                        <p class="text-lg text-gray-600">Kompleksowe rozwiązania chemiczne dla przemysłu. Wysokiej
+                            jakości preparaty opracowane w oparciu o najnowszą wiedzę i światowe trendy rozwojowe.</p>
                     </div>
-
+                    <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="ri-building-4-line text-secondary text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">Produkty według branż</h2>
+                        </div>
+                        <p class="text-gray-600 mb-8 leading-relaxed">Nasze produkty znajdują zastosowanie w wielu
+                            gałęziach przemysłu. Poniżej przedstawiamy podział według głównych branż i obszarów
+                            zastosowań.</p>
+                        <div class="grid lg:grid-cols-2 gap-8 items-start">
+                            <div class="space-y-6">
+                                <div class="bg-blue-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-blue-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-building-line text-blue-600"></i>
+                                        </div>
+                                        Płyty wiórowe
+                                    </h3>
+                                    <div class="space-y-3">
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">Sklejki</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">Laminaty HPL</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">Laminaty CPL</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">Płyty pilśniowe</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">Płyty porowate</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">OSB</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">MDF/HDF</h4>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-blue-900 mb-2">NPB</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-green-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-green-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-file-paper-2-line text-green-600"></i>
+                                        </div>
+                                        Produkcja papieru i warzelnie celulozy
+                                    </h3>
+                                </div>
+                                <div class="bg-purple-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-purple-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-brush-2-line text-purple-600"></i>
+                                        </div>
+                                        Impregnacja papieru
+                                    </h3>
+                                </div>
+                                <div class="bg-cyan-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-cyan-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-water-line text-cyan-600"></i>
+                                        </div>
+                                        Oczyszczalnie ścieków
+                                    </h3>
+                                    <p class="text-sm text-gray-600">(komunalne i przemysłowe)</p>
+                                </div>
+                                <div class="bg-violet-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-violet-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-drop-fill text-violet-600"></i>
+                                        </div>
+                                        Produkcja klejów i dyspersji
+                                    </h3>
+                                    <div class="space-y-3">
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-violet-900 mb-2">Kleje</h4>
+                                            <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                                                <span>• MF</span>
+                                                <span>• UF</span>
+                                                <span>• PF</span>
+                                                <span>• MUPF</span>
+                                                <span>• Kleje białe</span>
+                                                <span>• Inne</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3">
+                                            <h4 class="font-medium text-violet-900 mb-2">Dyspersje</h4>
+                                            <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                                                <span>• Styrenowo-akrylowe</span>
+                                                <span>• Akrylowe</span>
+                                                <span>• Winylo-octowe</span>
+                                                <span>• Inne</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="bg-yellow-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-yellow-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-flask-fill text-yellow-600"></i>
+                                        </div>
+                                        Produkcja formaliny
+                                    </h3>
+                                </div>
+                                <div class="bg-red-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-red-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-restaurant-line text-red-600"></i>
+                                        </div>
+                                        Przemysł spożywczy
+                                    </h3>
+                                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                                        <span>• Cukrownie</span>
+                                        <span>• Produkcja skrobi</span>
+                                        <span>• Mrożonki</span>
+                                        <span>• Frytki</span>
+                                        <span>• Masarnie</span>
+                                        <span>• Mleczarnie</span>
+                                        <span>• Wędzarnie</span>
+                                        <span>• Drożdżarnie</span>
+                                        <span>• Gorzelnie</span>
+                                        <span>• Produkcja farb i lakierów</span>
+                                        <span>• Przemysł wydobywczy</span>
+                                        <span>• Flotacja miedzi</span>
+                                        <span>• Flotacja cynku</span>
+                                        <span>• Flotacja ołowiu</span>
+                                    </div>
+                                </div>
+                                <div class="bg-orange-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-orange-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-hammer-line text-orange-600"></i>
+                                        </div>
+                                        Górnictwo i wiertnictwo
+                                    </h3>
+                                </div>
+                                <div class="bg-pink-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-pink-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-tire-line text-pink-600"></i>
+                                        </div>
+                                        Przemysł gumowy
+                                    </h3>
+                                </div>
+                                <div class="bg-indigo-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-indigo-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-car-line text-indigo-600"></i>
+                                        </div>
+                                        Przemysł oponiarski
+                                    </h3>
+                                </div>
+                                <div class="bg-teal-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-teal-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-test-tube-line text-teal-600"></i>
+                                        </div>
+                                        Produkcja polichlorku winylu
+                                    </h3>
+                                </div>
+                                <div class="bg-emerald-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-emerald-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-building-2-line text-emerald-600"></i>
+                                        </div>
+                                        Produkcja wełny mineralnej i szklanej
+                                    </h3>
+                                </div>
+                                <div class="bg-amber-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-amber-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-seedling-line text-amber-600"></i>
+                                        </div>
+                                        Produkcja nawozów sztucznych
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                        <div class="w-8 h-8 bg-slate-100 rounded flex items-center justify-center mr-3">
+                                            <i class="ri-drop-line text-slate-600"></i>
+                                        </div>
+                                        Środki do uzdatniania wody przemysłowej
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section id="rozdzielajace" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-scissors-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Środki rozdzielające</h2>
                         </div>
-                        
-                        <p class="text-gray-600 mb-8 leading-relaxed">Specjalistyczne preparaty stosowane m.in. w produkcji płyt drewnopochodnych (OSB, MDF, NPB), przetwórstwie gumy, poliuretanów, tworzyw sztucznych i metali lekkich. Zapewniają czyste oddzielenie formy od materiału, chronią powierzchnie robocze i poprawiają jakość gotowego wyrobu.</p>
-                        
+                        <p class="text-gray-600 mb-8 leading-relaxed">Specjalistyczne preparaty stosowane m.in. w
+                            produkcji płyt drewnopochodnych (OSB, MDF, NPB), przetwórstwie gumy, poliuretanów, tworzyw
+                            sztucznych i metali lekkich. Zapewniają czyste oddzielenie formy od materiału, chronią
+                            powierzchnie robocze i poprawiają jakość gotowego wyrobu.</p>
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                             <div class="product-card bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center mb-3">
@@ -162,10 +406,10 @@
                                     </div>
                                     <h4 class="font-semibold text-gray-900">Impregnacja papieru</h4>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-3">Specjalny preparat do impregnacji papieru dekoracyjnego</p>
+                                <p class="text-sm text-gray-600 mb-3">Specjalny preparat do impregnacji papieru
+                                    dekoracyjnego</p>
                                 <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol RI</div>
                             </div>
-
                             <div class="product-card bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center mb-3">
                                     <div class="w-8 h-8 bg-green-100 rounded flex items-center justify-center mr-3">
@@ -174,9 +418,9 @@
                                     <h4 class="font-semibold text-gray-900">Przemysł gumowy</h4>
                                 </div>
                                 <p class="text-sm text-gray-600 mb-3">Środek rozdzielający dla przemysłu gumowego</p>
-                                <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol RG42A</div>
+                                <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol RG42A
+                                </div>
                             </div>
-
                             <div class="product-card bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center mb-3">
                                     <div class="w-8 h-8 bg-amber-100 rounded flex items-center justify-center mr-3">
@@ -185,9 +429,9 @@
                                     <h4 class="font-semibold text-gray-900">Płyty wiórowe MDF</h4>
                                 </div>
                                 <p class="text-sm text-gray-600 mb-3">Dedykowany dla produkcji płyt MDF</p>
-                                <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol R-MDF</div>
+                                <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol R-MDF
+                                </div>
                             </div>
-
                             <div class="product-card bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center mb-3">
                                     <div class="w-8 h-8 bg-purple-100 rounded flex items-center justify-center mr-3">
@@ -197,11 +441,12 @@
                                 </div>
                                 <p class="text-sm text-gray-600 mb-3">Środki do produkcji płyt OSB</p>
                                 <div class="space-y-1">
-                                    <div class="bg-white rounded px-3 py-1 text-xs font-medium text-primary">SICol R-OSB1</div>
-                                    <div class="bg-white rounded px-3 py-1 text-xs font-medium text-primary">SICol R-OSB</div>
+                                    <div class="bg-white rounded px-3 py-1 text-xs font-medium text-primary">SICol
+                                        R-OSB1</div>
+                                    <div class="bg-white rounded px-3 py-1 text-xs font-medium text-primary">SICol R-OSB
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="product-card bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center mb-3">
                                     <div class="w-8 h-8 bg-red-100 rounded flex items-center justify-center mr-3">
@@ -209,10 +454,10 @@
                                     </div>
                                     <h4 class="font-semibold text-gray-900">Produkcja frytek</h4>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-3">Specjalistyczny środek dla przemysłu spożywczego</p>
+                                <p class="text-sm text-gray-600 mb-3">Specjalistyczny środek dla przemysłu spożywczego
+                                </p>
                                 <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol RF</div>
                             </div>
-
                             <div class="product-card bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center mb-3">
                                     <div class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center mr-3">
@@ -221,50 +466,60 @@
                                     <h4 class="font-semibold text-gray-900">Produkcja betonu</h4>
                                 </div>
                                 <p class="text-sm text-gray-600 mb-3">Środek rozdzielający do form betonowych</p>
-                                <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol 50-MR</div>
+                                <div class="bg-white rounded px-3 py-2 text-sm font-medium text-primary">SICol 50-MR
+                                </div>
                             </div>
                         </div>
-
                         <div class="bg-blue-50 rounded-lg p-6 mb-6">
                             <h4 class="font-semibold text-gray-900 mb-3">Inne zastosowania</h4>
-                            <p class="text-sm text-gray-600 mb-4">Odlew aluminium, produkcja kompozytów, produkcja siarki pastylkowanej</p>
+                            <p class="text-sm text-gray-600 mb-4">Odlew aluminium, produkcja kompozytów, produkcja
+                                siarki pastylkowanej</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol RC55</span>
-                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol RZ-101</span>
-                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol RT-01</span>
-                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol Coat Bezbarwny</span>
-                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol Coat Black</span>
+                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol
+                                    RC55</span>
+                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol
+                                    RZ-101</span>
+                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol
+                                    RT-01</span>
+                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol Coat
+                                    Bezbarwny</span>
+                                <span class="bg-white rounded px-3 py-1 text-sm font-medium text-primary">SICol Coat
+                                    Black</span>
                             </div>
                         </div>
-
                         <div class="bg-gradient-to-r from-secondary to-green-600 rounded-lg p-6 text-white">
                             <div class="flex items-center mb-3">
-                                <div class="w-8 h-8 bg-white bg-opacity-20 rounded flex items-center justify-center mr-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded flex items-center justify-center mr-3">
                                     <i class="ri-flask-line text-white"></i>
                                 </div>
                                 <h4 class="font-semibold">Laboratorium R&D</h4>
                             </div>
-                            <p class="text-sm opacity-90">Nasze Laboratorium R&D pomoże dobrać odpowiedni środek lub podejmie się opracowania nowego jeśli oferowane produkty nie będą właściwe do danego zastosowania.</p>
+                            <p class="text-sm opacity-90">Nasze Laboratorium R&D pomoże dobrać odpowiedni środek lub
+                                podejmie się opracowania nowego jeśli oferowane produkty nie będą właściwe do danego
+                                zastosowania.</p>
                         </div>
                     </section>
-
                     <section id="odpieniajace" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-bubble-chart-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Środki odpieniające (przeciwpienne)</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Wydajne preparaty eliminujące i zapobiegające powstawaniu piany w różnych procesach technologicznych. Skuteczne zarówno wobec pian naturalnych, jak i syntetycznych. Preparaty oferowane przez nas zostały opracowane w oparciu o najnowszą wiedzę i światowe trendy rozwojowe w tym zakresie.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Wydajne preparaty eliminujące i zapobiegające
+                            powstawaniu piany w różnych procesach technologicznych. Skuteczne zarówno wobec pian
+                            naturalnych, jak i syntetycznych. Preparaty oferowane przez nas zostały opracowane w oparciu
+                            o najnowszą wiedzę i światowe trendy rozwojowe w tym zakresie.</p>
                         <div class="bg-green-50 rounded-lg p-6 mb-6">
                             <h4 class="font-semibold text-gray-900 mb-4">Zastosowania w przemyśle:</h4>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <div class="space-y-2">
                                     <div class="flex items-center">
                                         <div class="w-2 h-2 bg-secondary rounded-full mr-3"></div>
-                                        <span class="text-sm text-gray-700">Przemysł ziemniaczany (skrobia, frytki, chipsy)</span>
+                                        <span class="text-sm text-gray-700">Przemysł ziemniaczany (skrobia, frytki,
+                                            chipsy)</span>
                                     </div>
                                     <div class="flex items-center">
                                         <div class="w-2 h-2 bg-secondary rounded-full mr-3"></div>
@@ -307,43 +562,72 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="bg-blue-50 rounded-lg p-6">
-                            <h4 class="font-semibold text-gray-900 mb-4">Preparaty flotacyjne (kolektory i frothery)</h4>
-                            <p class="text-sm text-gray-600 mb-4">Środki wspomagające flotację minerałów – w tym ksantogeniany, kolektory oraz środki pianotwórcze. Zapewniają skuteczne wychwytywanie siarczków metali, stabilizację piany i wysoką wydajność procesu odzysku.</p>
+                            <h4 class="font-semibold text-gray-900 mb-4">Preparaty flotacyjne (kolektory i frothery)
+                            </h4>
+                            <p class="text-sm text-gray-600 mb-4">Środki wspomagające flotację minerałów – w tym
+                                ksantogeniany, kolektory oraz środki pianotwórcze. Zapewniają skuteczne wychwytywanie
+                                siarczków metali, stabilizację piany i wysoką wydajność procesu odzysku.</p>
                             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol D</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol DE</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol E</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol Frother</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol PAX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol PEX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol PEX-37</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol PHX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol PIBX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol SBX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol SEX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol SIBX</span>
-                                <span class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol B</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    D</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    DE</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    E</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    Frother</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    PAX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    PEX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    PEX-37</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    PHX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    PIBX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    SBX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    SEX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    SIBX</span>
+                                <span
+                                    class="bg-white rounded px-2 py-1 text-xs font-medium text-primary text-center">SICol
+                                    B</span>
                             </div>
                         </div>
                     </section>
-
                     <section id="antypylowe" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-mist-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Środki antypyłowe</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Preparaty ograniczające pylenie w procesach przemysłowych, m.in. podczas impregnacji papieru czy przetwórstwa płyt. Poprawiają komfort pracy, chronią zdrowie pracowników i redukują emisję cząstek stałych.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Preparaty ograniczające pylenie w procesach
+                            przemysłowych, m.in. podczas impregnacji papieru czy przetwórstwa płyt. Poprawiają komfort
+                            pracy, chronią zdrowie pracowników i redukują emisję cząstek stałych.</p>
                         <div class="bg-gray-50 rounded-lg p-6">
                             <div class="flex items-center justify-between">
                                 <div>
                                     <h4 class="font-semibold text-gray-900 mb-2">SICol AD-1</h4>
-                                    <p class="text-sm text-gray-600">Skuteczny środek antypyłowy do zastosowań przemysłowych</p>
+                                    <p class="text-sm text-gray-600">Skuteczny środek antypyłowy do zastosowań
+                                        przemysłowych</p>
                                 </div>
                                 <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
                                     <i class="ri-shield-check-line text-blue-600 text-2xl"></i>
@@ -351,59 +635,64 @@
                             </div>
                         </div>
                     </section>
-
                     <section id="zwilzajace" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-drop-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Środki zwilżające</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">W ofercie SIC znajdują się środki zwilżające, przesycające stosowane w procesach impregnacji papieru.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">W ofercie SIC znajdują się środki zwilżające,
+                            przesycające stosowane w procesach impregnacji papieru.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="bg-blue-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol WT</h4>
-                                <p class="text-sm text-gray-600">Przeznaczony do żywic mocznikowych i melaminowych, do procesu impregnacji papierów dekoracyjnych stosowanych do laminowania</p>
+                                <p class="text-sm text-gray-600">Przeznaczony do żywic mocznikowych i melaminowych, do
+                                    procesu impregnacji papierów dekoracyjnych stosowanych do laminowania</p>
                             </div>
                             <div class="bg-green-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol ZW</h4>
-                                <p class="text-sm text-gray-600">Przeznaczony do żywic mocznikowych i melaminowych, do procesu impregnacji papierów trudnych do impregnacji</p>
+                                <p class="text-sm text-gray-600">Przeznaczony do żywic mocznikowych i melaminowych, do
+                                    procesu impregnacji papierów trudnych do impregnacji</p>
                             </div>
                         </div>
                     </section>
-
                     <section id="woda" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-water-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Środki do uzdatniania wody przemysłowej</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Dodatki wspomagające kondycjonowanie i oczyszczanie wody stosowanej w procesach technologicznych, kotłowniach, układach chłodniczych i obiegach zamkniętych. Zapewniają ochronę instalacji i efektywne działanie systemów wodnych.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Dodatki wspomagające kondycjonowanie i
+                            oczyszczanie wody stosowanej w procesach technologicznych, kotłowniach, układach
+                            chłodniczych i obiegach zamkniętych. Zapewniają ochronę instalacji i efektywne działanie
+                            systemów wodnych.</p>
                         <div class="bg-cyan-50 rounded-lg p-6">
                             <h4 class="font-semibold text-gray-900 mb-3">Flokulanty i koagulanty</h4>
-                            <p class="text-sm text-gray-600">Do kondycjonowania zawiesin i ścieków technologicznych. Poprawiają klarowność wody, wspomagają separację faz i usprawniają działanie systemów oczyszczania.</p>
+                            <p class="text-sm text-gray-600">Do kondycjonowania zawiesin i ścieków technologicznych.
+                                Poprawiają klarowność wody, wspomagają separację faz i usprawniają działanie systemów
+                                oczyszczania.</p>
                         </div>
                     </section>
-
                     <section id="spieniajace" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-gas-station-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Środki spieniające (gazownictwo)</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Formulacje przeznaczone do stosowania przy wydobyciu gazu – tworzą stabilną pianę wspomagającą transport cieczy w odwiertach, zwiększają efektywność procesu odgazowywania i zmniejszają zużycie wody.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Formulacje przeznaczone do stosowania przy
+                            wydobyciu gazu – tworzą stabilną pianę wspomagającą transport cieczy w odwiertach,
+                            zwiększają efektywność procesu odgazowywania i zmniejszają zużycie wody.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="bg-orange-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol STW</h4>
-                                <p class="text-sm text-gray-600">Specjalistyczna formulacja do zastosowań w gazownictwie</p>
+                                <p class="text-sm text-gray-600">Specjalistyczna formulacja do zastosowań w gazownictwie
+                                </p>
                             </div>
                             <div class="bg-red-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol STS</h4>
@@ -411,46 +700,49 @@
                             </div>
                         </div>
                     </section>
-
                     <section id="utwardzacze" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-hammer-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Utwardzacze do żywic</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Katalizatory przyspieszające procesy sieciowania żywic aminowych i fenolowych (UF, MF, PF), stosowane w produkcji sklejek, płyt i materiałów kompozytowych.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Katalizatory przyspieszające procesy sieciowania
+                            żywic aminowych i fenolowych (UF, MF, PF), stosowane w produkcji sklejek, płyt i materiałów
+                            kompozytowych.</p>
                         <div class="grid md:grid-cols-3 gap-6">
                             <div class="bg-purple-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol UH</h4>
                                 <p class="text-sm text-gray-600 mb-2">Przeznaczony do żywic mocznikowych</p>
-                                <div class="text-xs text-purple-600 bg-white rounded px-2 py-1 inline-block">Impregnacja płyt laminowanych, prasy KT</div>
+                                <div class="text-xs text-purple-600 bg-white rounded px-2 py-1 inline-block">Impregnacja
+                                    płyt laminowanych, prasy KT</div>
                             </div>
                             <div class="bg-indigo-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol MH</h4>
                                 <p class="text-sm text-gray-600 mb-2">Przeznaczony do żywic melaminowych</p>
-                                <div class="text-xs text-indigo-600 bg-white rounded px-2 py-1 inline-block">Impregnacja płyt laminowanych, prasy KT</div>
+                                <div class="text-xs text-indigo-600 bg-white rounded px-2 py-1 inline-block">Impregnacja
+                                    płyt laminowanych, prasy KT</div>
                             </div>
                             <div class="bg-pink-50 rounded-lg p-6">
                                 <h4 class="font-semibold text-gray-900 mb-3">SICol MS</h4>
                                 <p class="text-sm text-gray-600 mb-2">Przeznaczony do żywic fenolowych</p>
-                                <div class="text-xs text-pink-600 bg-white rounded px-2 py-1 inline-block">Impregnacja płyt warstwowych HPL i CPL</div>
+                                <div class="text-xs text-pink-600 bg-white rounded px-2 py-1 inline-block">Impregnacja
+                                    płyt warstwowych HPL i CPL</div>
                             </div>
                         </div>
                     </section>
-
                     <section id="plastyfikatory" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-flask-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Plastyfikatory</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Pośród szerokiej gamy środków stosowanych w procesach związanych z produkcją płyt wiórowych i z impregnacją papieru znajdują się także plastyfikatory opracowane przez nasze Laboratorium R&D.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Pośród szerokiej gamy środków stosowanych w
+                            procesach związanych z produkcją płyt wiórowych i z impregnacją papieru znajdują się także
+                            plastyfikatory opracowane przez nasze Laboratorium R&D.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="product-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
                                 <div class="flex items-center mb-4">
@@ -459,45 +751,53 @@
                                     </div>
                                     <h4 class="font-semibold text-gray-900">SICol H3M</h4>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-3">Przeznaczony do żywic mocznikowych i melaminowych</p>
+                                <p class="text-sm text-gray-600 mb-3">Przeznaczony do żywic mocznikowych i melaminowych
+                                </p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">Impregnacja płyt HPL</span>
-                                    <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">CPL</span>
-                                    <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">Obrzeża meblowe</span>
+                                    <span
+                                        class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">Impregnacja
+                                        płyt HPL</span>
+                                    <span
+                                        class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">CPL</span>
+                                    <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">Obrzeża
+                                        meblowe</span>
                                 </div>
                             </div>
-
                             <div class="product-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                                         <i class="ri-flask-2-line text-green-600"></i>
                                     </div>
                                     <h4 class="font-semibold text-gray-900">SICol PM</h4>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-3">Plastyfikator i stabilizator do żywic melaminowych</p>
+                                <p class="text-sm text-gray-600 mb-3">Plastyfikator i stabilizator do żywic melaminowych
+                                </p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-green-700">Impregnacja płyt laminowanych</span>
+                                    <span
+                                        class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-green-700">Impregnacja
+                                        płyt laminowanych</span>
                                 </div>
                             </div>
                         </div>
                     </section>
-
                     <section id="plyny-myjace" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-brush-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Płyny myjące</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Profesjonalne preparaty do czyszczenia maszyn, linii technologicznych, posadzek i powierzchni przemysłowych. W naszej ofercie znajdziesz środki alkaliczne, kwaśne, odtłuszczające i uniwersalne.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Profesjonalne preparaty do czyszczenia maszyn,
+                            linii technologicznych, posadzek i powierzchni przemysłowych. W naszej ofercie znajdziesz
+                            środki alkaliczne, kwaśne, odtłuszczające i uniwersalne.</p>
                         <div class="table-responsive">
                             <div class="bg-gray-50 rounded-lg p-6">
                                 <div class="flex items-center justify-center mb-6">
-                                    <img src="https://readdy.ai/api/search-image?query=professional%20industrial%20cleaning%20products%20table%20chart%20with%20chemical%20formulations%20bottles%20and%20laboratory%20equipment%20on%20clean%20white%20background%20modern%20industrial%20setting&width=600&height=300&seq=cleaning_table_1&orientation=landscape" 
-                                         alt="Tabela płynów myjących" 
-                                         class="rounded-lg shadow-sm object-cover object-top w-full max-w-2xl">
+                                    <img src="https://readdy.ai/api/search-image?query=professional%20industrial%20cleaning%20products%20table%20chart%20with%20chemical%20formulations%20bottles%20and%20laboratory%20equipment%20on%20clean%20white%20background%20modern%20industrial%20setting&width=600&height=300&seq=cleaning_table_1&orientation=landscape"
+                                        alt="Tabela płynów myjących"
+                                        class="rounded-lg shadow-sm object-cover object-top w-full max-w-2xl">
                                 </div>
                                 <div class="overflow-x-auto">
                                     <table class="w-full text-sm">
@@ -505,7 +805,8 @@
                                             <tr class="border-b border-gray-200">
                                                 <th class="text-left py-3 px-4 font-semibold text-gray-900">Produkt</th>
                                                 <th class="text-left py-3 px-4 font-semibold text-gray-900">Typ</th>
-                                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Zastosowanie</th>
+                                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Zastosowanie
+                                                </th>
                                                 <th class="text-left py-3 px-4 font-semibold text-gray-900">pH</th>
                                             </tr>
                                         </thead>
@@ -513,25 +814,29 @@
                                             <tr>
                                                 <td class="py-3 px-4 font-medium text-primary">SICol Clean ALK</td>
                                                 <td class="py-3 px-4 text-gray-600">Alkaliczny</td>
-                                                <td class="py-3 px-4 text-gray-600">Odtłuszczanie, usuwanie osadów organicznych</td>
+                                                <td class="py-3 px-4 text-gray-600">Odtłuszczanie, usuwanie osadów
+                                                    organicznych</td>
                                                 <td class="py-3 px-4 text-gray-600">12-13</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-3 px-4 font-medium text-primary">SICol Clean ACID</td>
                                                 <td class="py-3 px-4 text-gray-600">Kwaśny</td>
-                                                <td class="py-3 px-4 text-gray-600">Usuwanie kamienia, rdzy, osadów mineralnych</td>
+                                                <td class="py-3 px-4 text-gray-600">Usuwanie kamienia, rdzy, osadów
+                                                    mineralnych</td>
                                                 <td class="py-3 px-4 text-gray-600">1-2</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-3 px-4 font-medium text-primary">SICol Clean UNI</td>
                                                 <td class="py-3 px-4 text-gray-600">Uniwersalny</td>
-                                                <td class="py-3 px-4 text-gray-600">Czyszczenie ogólne, posadzki, powierzchnie</td>
+                                                <td class="py-3 px-4 text-gray-600">Czyszczenie ogólne, posadzki,
+                                                    powierzchnie</td>
                                                 <td class="py-3 px-4 text-gray-600">7-8</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-3 px-4 font-medium text-primary">SICol Clean DEG</td>
                                                 <td class="py-3 px-4 text-gray-600">Odtłuszczający</td>
-                                                <td class="py-3 px-4 text-gray-600">Usuwanie tłuszczów, olejów, smarów</td>
+                                                <td class="py-3 px-4 text-gray-600">Usuwanie tłuszczów, olejów, smarów
+                                                </td>
                                                 <td class="py-3 px-4 text-gray-600">9-10</td>
                                             </tr>
                                         </tbody>
@@ -540,29 +845,34 @@
                             </div>
                         </div>
                     </section>
-
                     <section id="stabilizator" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-shield-check-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Stabilizator formaliny</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Stabilizatory formaliny są stosowane w celu zapobiegania polimeryzacji formaldehydu i utrzymania stabilnych właściwości roztworu. Są one dodatkami w formie roztworu roboczego, dodawanymi w bardzo małych ilościach w przeliczeniu na czysty formaldehyd.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Stabilizatory formaliny są stosowane w celu
+                            zapobiegania polimeryzacji formaldehydu i utrzymania stabilnych właściwości roztworu. Są one
+                            dodatkami w formie roztworu roboczego, dodawanymi w bardzo małych ilościach w przeliczeniu
+                            na czysty formaldehyd.</p>
                         <div class="bg-amber-50 rounded-lg p-6 mb-6">
                             <div class="flex items-start">
-                                <div class="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <div
+                                    class="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                     <i class="ri-flask-fill text-amber-600 text-2xl"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 mb-3">SICol SF-100</h4>
-                                    <p class="text-sm text-gray-600 mb-4">Stanowi 2% roztwór polimeru w różnego typu rozpuszczalnikach (metanolu lub metoksydipropamolu). Pozwala na zoptymalizowanie procesu transportu i przechowywania formaliny ograniczając tym samym koszty.</p>
+                                    <p class="text-sm text-gray-600 mb-4">Stanowi 2% roztwór polimeru w różnego typu
+                                        rozpuszczalnikach (metanolu lub metoksydipropamolu). Pozwala na zoptymalizowanie
+                                        procesu transportu i przechowywania formaliny ograniczając tym samym koszty.</p>
                                     <div class="space-y-2">
                                         <div class="flex items-center">
                                             <div class="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
-                                            <span class="text-sm text-gray-700">Obniżenie temperatury przechowywania</span>
+                                            <span class="text-sm text-gray-700">Obniżenie temperatury
+                                                przechowywania</span>
                                         </div>
                                         <div class="flex items-center">
                                             <div class="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
@@ -576,32 +886,35 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="chart-container bg-gray-50 rounded-lg p-6">
                             <h4 class="font-semibold text-gray-900 mb-4">Skuteczność stabilizacji SICol SF-100</h4>
                             <div id="stabilityChart" class="w-full h-64"></div>
                         </div>
                     </section>
-
                     <section id="powlekacze" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-paint-brush-line text-primary text-xl"></i>
                             </div>
-                            <h2 class="text-2xl font-bold text-gray-900">Powlekacze mocznika / nawozów, antyzbrylacze</h2>
+                            <h2 class="text-2xl font-bold text-gray-900">Powlekacze mocznika / nawozów, antyzbrylacze
+                            </h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Preparaty powlekające granulaty nawozowe – ograniczają pylenie, zbrylanie i niekontrolowane uwalnianie składników aktywnych. Podnoszą trwałość produktu i ułatwiają jego zastosowanie.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Preparaty powlekające granulaty nawozowe –
+                            ograniczają pylenie, zbrylanie i niekontrolowane uwalnianie składników aktywnych. Podnoszą
+                            trwałość produktu i ułatwiają jego zastosowanie.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="product-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                                         <i class="ri-leaf-line text-green-600"></i>
                                     </div>
                                     <h4 class="font-semibold text-gray-900">SICol PBF</h4>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-4">Wolny od formaldehydu produkt polimeryczny używany jako środek powlekający powierzchnię granul mocznika. Eliminuje pylenie oraz zbrylanie się granul podczas transportu, przechowywania i użytkowania.</p>
+                                <p class="text-sm text-gray-600 mb-4">Wolny od formaldehydu produkt polimeryczny używany
+                                    jako środek powlekający powierzchnię granul mocznika. Eliminuje pylenie oraz
+                                    zbrylanie się granul podczas transportu, przechowywania i użytkowania.</p>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-green-700">
                                         <i class="ri-seedling-line mr-1"></i>Rolnictwo
@@ -614,7 +927,6 @@
                                     </span>
                                 </div>
                             </div>
-
                             <div class="product-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6">
                                 <div class="flex items-center mb-4">
                                     <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
@@ -622,7 +934,8 @@
                                     </div>
                                     <h4 class="font-semibold text-gray-900">SICol ANF-24012</h4>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-4">Środek antyzbrylający i antypyłowy w nawozach NPK oraz azotanowych. Zapewnia optymalną jakość produktu końcowego.</p>
+                                <p class="text-sm text-gray-600 mb-4">Środek antyzbrylający i antypyłowy w nawozach NPK
+                                    oraz azotanowych. Zapewnia optymalną jakość produktu końcowego.</p>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="text-xs bg-white bg-opacity-70 rounded px-2 py-1 text-blue-700">
                                         <i class="ri-forbid-line mr-1"></i>Antyzbrylacz
@@ -634,65 +947,70 @@
                             </div>
                         </div>
                     </section>
-
                     <section id="sulfobursztyniany" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-test-tube-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Sulfobursztyniany</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Mają szerokie zastosowanie w przemyśle, głównie dzięki swojej amfifilowej strukturze, co czyni je skutecznymi surfaktantami anionowymi.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Mają szerokie zastosowanie w przemyśle, głównie
+                            dzięki swojej amfifilowej strukturze, co czyni je skutecznymi surfaktantami anionowymi.</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="product-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4 text-center">
-                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <div
+                                class="product-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4 text-center">
+                                <div
+                                    class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                     <i class="ri-drop-line text-purple-600 text-xl"></i>
                                 </div>
                                 <h4 class="font-semibold text-gray-900 text-sm">SICol 60 IPA</h4>
                             </div>
-
-                            <div class="product-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 text-center">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <div
+                                class="product-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 text-center">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                     <i class="ri-water-line text-blue-600 text-xl"></i>
                                 </div>
                                 <h4 class="font-semibold text-gray-900 text-sm">SICol OS 60 HPG-2</h4>
                             </div>
-
-                            <div class="product-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-4 text-center">
-                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <div
+                                class="product-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-4 text-center">
+                                <div
+                                    class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                     <i class="ri-bubble-chart-line text-green-600 text-xl"></i>
                                 </div>
                                 <h4 class="font-semibold text-gray-900 text-sm">SICol OS 70 ET</h4>
                             </div>
-
-                            <div class="product-card bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-4 text-center">
-                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <div
+                                class="product-card bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-4 text-center">
+                                <div
+                                    class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                     <i class="ri-flask-2-line text-orange-600 text-xl"></i>
                                 </div>
                                 <h4 class="font-semibold text-gray-900 text-sm">SICol OS 70 PG</h4>
                             </div>
-
-                            <div class="product-card bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-4 text-center">
-                                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <div
+                                class="product-card bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-4 text-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                     <i class="ri-beaker-line text-teal-600 text-xl"></i>
                                 </div>
                                 <h4 class="font-semibold text-gray-900 text-sm">SICol OS 70 PG-3</h4>
                             </div>
                         </div>
                     </section>
-
                     <section id="dyspersje" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-compasses-2-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Dyspersje i żywice</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Wodne dyspersje polimerowe (np. winylooctowe, styrenowo-akrylowe), stosowane jako spoiwa i komponenty pomocnicze w wielu procesach przemysłowych – m.in. do impregnacji, powlekania i klejenia.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Wodne dyspersje polimerowe (np. winylooctowe,
+                            styrenowo-akrylowe), stosowane jako spoiwa i komponenty pomocnicze w wielu procesach
+                            przemysłowych – m.in. do impregnacji, powlekania i klejenia.</p>
                         <div class="bg-blue-50 rounded-lg p-6 mb-6">
                             <div class="flex items-center">
                                 <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -700,11 +1018,11 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 mb-2">SICol E46</h4>
-                                    <p class="text-sm text-gray-600">Wodna dyspersja polimerowa o szerokim zastosowaniu w procesach przemysłowych</p>
+                                    <p class="text-sm text-gray-600">Wodna dyspersja polimerowa o szerokim zastosowaniu
+                                        w procesach przemysłowych</p>
                                 </div>
-            </div>
+                            </div>
                         </div>
-
                         <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6">
                             <h4 class="font-semibold text-gray-900 mb-4">Żywice melaminowe w naszej ofercie</h4>
                             <div class="grid md:grid-cols-3 gap-4">
@@ -738,17 +1056,17 @@
                             </div>
                         </div>
                     </section>
-
                     <section id="surowce" class="bg-white rounded-lg shadow-sm p-8 mb-8">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="ri-oil-line text-primary text-xl"></i>
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900">Surowce chemiczne</h2>
                         </div>
-
-                        <p class="text-gray-600 mb-6 leading-relaxed">Baza składników i komponentów wykorzystywanych do dalszej produkcji chemicznej – zarówno do formuł własnych, jak i aplikacji klientów. W ofercie również odczynniki techniczne i półprodukty.</p>
-
+                        <p class="text-gray-600 mb-6 leading-relaxed">Baza składników i komponentów wykorzystywanych do
+                            dalszej produkcji chemicznej – zarówno do formuł własnych, jak i aplikacji klientów. W
+                            ofercie również odczynniki techniczne i półprodukty.</p>
                         <div class="grid md:grid-cols-2 gap-8">
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-4">Podstawowe surowce chemiczne</h4>
@@ -766,7 +1084,8 @@
                                         <span class="text-gray-700">Etanol techniczny</span>
                                     </div>
                                     <div class="flex items-center bg-gray-50 rounded-lg p-3">
-                                        <div class="w-8 h-8 bg-purple-100 rounded flex items-center justify-center mr-3">
+                                        <div
+                                            class="w-8 h-8 bg-purple-100 rounded flex items-center justify-center mr-3">
                                             <i class="ri-water-line text-purple-600"></i>
                                         </div>
                                         <span class="text-gray-700">Wodorotlenek sodu</span>
@@ -779,12 +1098,12 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-4">Składniki specjalistyczne</h4>
                                 <div class="space-y-3">
                                     <div class="flex items-center bg-gray-50 rounded-lg p-3">
-                                        <div class="w-8 h-8 bg-orange-100 rounded flex items-center justify-center mr-3">
+                                        <div
+                                            class="w-8 h-8 bg-orange-100 rounded flex items-center justify-center mr-3">
                                             <i class="ri-compasses-2-line text-orange-600"></i>
                                         </div>
                                         <span class="text-gray-700">Heksametylolmelamina</span>
@@ -796,7 +1115,8 @@
                                         <span class="text-gray-700">Pięciosiarczek fosforu</span>
                                     </div>
                                     <div class="flex items-center bg-gray-50 rounded-lg p-3">
-                                        <div class="w-8 h-8 bg-indigo-100 rounded flex items-center justify-center mr-3">
+                                        <div
+                                            class="w-8 h-8 bg-indigo-100 rounded flex items-center justify-center mr-3">
                                             <i class="ri-shield-line text-indigo-600"></i>
                                         </div>
                                         <span class="text-gray-700">TBBA (tetrabromobisfenol A)</span>
@@ -816,22 +1136,24 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="mt-8 text-center">
-                            <button class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-blue-700 whitespace-nowrap">
+                            <button
+                                class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-blue-700 whitespace-nowrap">
                                 <i class="ri-question-line mr-2"></i>Zapytaj o inne surowce
                             </button>
                         </div>
                     </section>
-
                     <div class="bg-gradient-to-r from-primary to-blue-700 rounded-lg p-8 text-white text-center">
                         <h3 class="text-2xl font-bold mb-4">Potrzebujesz więcej informacji?</h3>
-                        <p class="mb-6 opacity-90">Skontaktuj się z naszymi specjalistami, aby uzyskać szczegółowe informacje o produktach i ich zastosowaniu.</p>
+                        <p class="mb-6 opacity-90">Skontaktuj się z naszymi specjalistami, aby uzyskać szczegółowe
+                            informacje o produktach i ich zastosowaniu.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button class="bg-white text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-100 whitespace-nowrap">
+                            <button
+                                class="bg-white text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-100 whitespace-nowrap">
                                 <i class="ri-phone-line mr-2"></i>Zadzwoń do nas
                             </button>
-                            <button class="bg-secondary text-white px-8 py-3 rounded-button font-medium hover:bg-green-700 whitespace-nowrap">
+                            <button
+                                class="bg-secondary text-white px-8 py-3 rounded-button font-medium hover:bg-green-700 whitespace-nowrap">
                                 <i class="ri-mail-line mr-2"></i>Wyślij zapytanie
                             </button>
                         </div>
@@ -840,43 +1162,11 @@
             </div>
         </div>
     </div>
-
-    <footer class="bg-gray-900 text-white mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="font-['Pacifico'] text-xl text-secondary mb-4">SIC</h3>
-                    <p class="text-gray-400 text-sm">Specjalizujemy się w procesach przemysłowych i rozwiązaniach chemicznych dla przemysłu.</p>
-                </div>
-                
-                <div></div>
-                <div></div>
-
-                <div>
-                    <h4 class="font-semibold mb-4">Kontakt</h4>
-                    <div class="space-y-2 text-sm text-gray-400">
-                        <p>ul. Przemysłowa 15</p>
-                        <p>35-105 Rzeszów</p>
-                        <p>+48 17 852 34 56</p>
-                        <p>biuro@sic.pl</p>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2025 Wszelkie prawa zastrzeżone.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
-
     <script id="navigation-scroll">
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('section[id]');
-
             function updateActiveLink() {
                 let current = '';
                 sections.forEach(section => {
@@ -885,7 +1175,6 @@
                         current = section.getAttribute('id');
                     }
                 });
-
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${current}`) {
@@ -893,12 +1182,10 @@
                     }
                 });
             }
-
             window.addEventListener('scroll', updateActiveLink);
             updateActiveLink();
-
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetSection = document.getElementById(targetId);
@@ -912,9 +1199,8 @@
             });
         });
     </script>
-
     <script id="stability-chart">
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const chartDom = document.getElementById('stabilityChart');
             if (chartDom) {
                 const myChart = echarts.init(chartDom);
@@ -970,28 +1256,25 @@
                     ]
                 };
                 myChart.setOption(option);
-
-                window.addEventListener('resize', function() {
+                window.addEventListener('resize', function () {
                     myChart.resize();
                 });
             }
         });
     </script>
-
     <script id="product-interactions">
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const productCards = document.querySelectorAll('.product-card');
-            
             productCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
+                card.addEventListener('mouseenter', function () {
                     this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
                 });
-                
-                card.addEventListener('mouseleave', function() {
+                card.addEventListener('mouseleave', function () {
                     this.style.boxShadow = '';
                 });
             });
         });
     </script>
 </body>
+
 </html>
