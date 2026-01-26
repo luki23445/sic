@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branże - SIC Chemicals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .industries-section {
+            background-color: var(--bg-light);
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling inspired by 'team-card' but adapted for text content */
+        .industry-card {
+            background: white;
+            border-radius: 12px;
+            /* Soft rounding */
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            /* Premium shadow */
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(12, 59, 136, 0.15);
+        }
+
+        /* Decorative top accent */
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .industry-card:hover::before {
+            opacity: 1;
+        }
+
+        .industry-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background: #f0f9ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover .industry-icon-wrapper {
+            background: var(--primary-color);
+            color: white;
+            transform: rotateY(180deg);
+            /* Playful interaction */
+        }
+
+        .industry-card:hover .industry-icon-wrapper i {
+            transform: rotateY(-180deg);
+            /* Keep icon upright if preferred, or let it spin */
+        }
+
+        .industry-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .industry-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .industry-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .industry-list li::before {
+            content: "→";
+            /* Arrow implies action/movement */
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            transition: margin-left 0.3s ease;
+        }
+
+        .industry-card:hover .industry-list li::before {
+            margin-left: 3px;
+            /* Subtle nudge on hover */
+        }
+
+        /* Nested content styling */
+        .nested-section {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .nested-header {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">S</div>
+                    SIC CHEMICALS
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="branze.html" class="active">Branże</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Intro -->
+    <section class="hero hero-with-bg" style="background-image: url('grafiki/offer-header.png'); padding: 6rem 0;">
+        <div class="hero-overlay"></div>
+        <div class="container" style="text-align: center;">
+            <h1 style="margin-bottom: 1rem;">Branże</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: white;">Obsługujemy kluczowe sektory przemysłu,
+                dostarczając dedykowane rozwiązania chemiczne.</p>
+        </div>
+    </section>
+
+    <!-- Industries Grid Section -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="industries-grid">
+
+                <!-- Płyty wiórowe -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="industry-title">Płyty wiórowe</h3>
+                    <ul class="industry-list">
+                        <li>Sklejki</li>
+                        <li>Laminaty HPL i CPL</li>
+                        <li>Płyty pilśniowe i porowate</li>
+                        <li>OSB</li>
+                        <li>MDF / HDF</li>
+                        <li>NPB</li>
+                    </ul>
+                </div>
+
+                <!-- Produkcja papieru -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-scroll"></i></div>
+                    <h3 class="industry-title">Papier i Celuloza</h3>
+                    <ul class="industry-list">
+                        <li>Produkcja papieru</li>
+                        <li>Warzelnie celulozy</li>
+                        <li>Impregnacja papieru</li>
+                    </ul>
+                </div>
+
+                <!-- Chemia Budowlana -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-fill-drip"></i></div>
+                    <h3 class="industry-title">Kleje i Dyspersje</h3>
+                    <ul class="industry-list">
+                        <li><strong>Kleje:</strong> MF, UF, PF, MUPF, Białe</li>
+                        <li><strong>Dyspersje:</strong> Styrenowo-akrylowe, Akrylowe, Winylo-octowe</li>
+                    </ul>
+                </div>
+
+                <!-- Oczyszczalnie ścieków -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-water"></i></div>
+                    <h3 class="industry-title">Oczyszczalnie Ścieków</h3>
+                    <ul class="industry-list">
+                        <li>Oczyszczalnie komunalne</li>
+                        <li>Oczyszczalnie przemysłowe</li>
+                        <li>Uzdatnianie wody przemysłowej</li>
+                    </ul>
+                </div>
+
+                <!-- Przemysł spożywczy -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-utensils"></i></div>
+                    <h3 class="industry-title">Przemysł Spożywczy</h3>
+                    <ul class="industry-list">
+                        <li>Cukrownie i Skrobia</li>
+                        <li>Mrożonki i Frytki</li>
+                        <li>Masarnie i Wędzarnie</li>
+                        <li>Mleczarnie</li>
+                        <li>Drożdżarnie i Gorzelnie</li>
+                    </ul>
+                </div>
+
+                <!-- Przemysł wydobywczy -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-mountain"></i></div>
+                    <h3 class="industry-title">Wydobycie i Górnictwo</h3>
+                    <ul class="industry-list">
+                        <li>Flotacja miedzi, cynku, ołowiu</li>
+                        <li>Górnictwo i wiertnictwo</li>
+                        <li>Produkcja nawozów sztucznych</li>
+                    </ul>
+                </div>
+
+                <!-- Farby i Lakiery -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-paint-roller"></i></div>
+                    <h3 class="industry-title">Farby i Lakiery</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Dostarczamy kluczowe komponenty chemiczne
+                        i uszlachetniające dla producentów powłok lakierniczych.</p>
+                    <ul class="industry-list">
+                        <li>Produkcja farb</li>
+                        <li>Produkcja lakierów</li>
+                    </ul>
+                </div>
+
+                <!-- Inne Przemysły -->
+                <div class="industry-card">
+                    <div class="industry-icon-wrapper"><i class="fas fa-cogs"></i></div>
+                    <h3 class="industry-title">Inne Specjalizacje</h3>
+                    <ul class="industry-list">
+                        <li>Produkcja formaliny</li>
+                        <li>Przemysł gumowy i oponiarski</li>
+                        <li>Produkcja PVC</li>
+                        <li>Wełna mineralna i szklana</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Left: Logo -->
+            <div class="footer-logo">
+                <div class="footer-logo-icon">S</div>
+                <div class="footer-logo-text">
+                    <span class="footer-logo-title">SIC</span>
+                    <span class="footer-logo-subtitle">CHEMICALS</span>
+                </div>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="footer-info">
+                <p>&copy; 2025 SIC Chemicals Sp. z o.o. Wszystkie prawa zastrzeżone.</p>
+                <p style="font-size: 0.75rem; opacity: 0.7;">Chemia dla najbardziej wymagających gałęzi przemysłu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
